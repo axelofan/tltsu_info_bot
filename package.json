@@ -1,0 +1,15 @@
+{
+  "name": "tsu-info-bot",
+  "version": "0.0.1",
+  "description": "Телеграм бот для курсов по подготовке к ЕГЭ по информатике в ТГУ.",
+  "main": "server.js",
+  "repository": "",
+  "author": "Cabanov Alexey <cabanov.alexey@yandex.ru>",
+  "scripts": {
+    "start": "forever start server.js"
+  },
+  "dependencies": {
+    "node-emoji": "^1.4.3",
+    "node-telegram-bot-api": "^0.24.0"
+  }
+}
