@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 const emoji = require('node-emoji').get;
-const token = '***';
+const token = '300054898:AAEFBYpmGCQ1a_vlA0-zj_RiMVLgZh-UPYk';
 const authorChat = 173295753;
 
 const startMenu = JSON.stringify({
@@ -10,8 +10,8 @@ const startMenu = JSON.stringify({
     [{ text: 'Логика', callback_data:'logic' }],
     [{ text: 'Пользовательский курс', callback_data:'userCourse' }],
     [{ text: 'Алгоритмизация и программирование', callback_data:'programming' }],
-    [{ text: 'Программирование (продвинутый курс)', callback_data: 'expertProgramming' }],
-    [{ text: 'Задать вопрос', callback_data: 'question' }]
+    //[{ text: 'Программирование (продвинутый курс)', callback_data: 'expertProgramming' }],
+    [{ text: 'Задать вопрос', callback_data: 'question' }],
   ]
 });
 
@@ -27,56 +27,53 @@ const information = JSON.stringify({
 
 const number = JSON.stringify({
   inline_keyboard: [
-    [{ text: 'Позиционные системы счисления.', callback_data: 'presentation6.pdf' }],
-    [{ text: 'Перевод между системами счисления.', callback_data: 'presentation7.pdf' }],
+    [{ text: 'Позиционные системы с основанием 2, 8, 16', callback_data: 'presentation6.pdf' }],
+    [{ text: 'Перевод в десятичную систему и обратно.', callback_data: 'presentation7.pdf' }],
     [{ text: 'Арифметические операции в позиционных системах счисления.', callback_data: 'presentation8.pdf' }],
-    [{ text: 'Арифметика в двоичных числах', callback_data: 'presentation9.pdf' }],
-    [{ text: 'Уравнения в системах счисления.', callback_data: 'presentation28.pdf' }]
   ]
 });
 
 const logic = JSON.stringify({
   inline_keyboard: [
-    [{ text: 'Алгебра логики. Логические операции.', callback_data: 'presentation10.pdf' }],
-    [{ text: 'Таблицы истинности.', callback_data: 'presentation11.pdf' }],
-    [{ text: 'Преобразование логических выражений.', callback_data: 'presentation12.pdf' }],
-    [{ text: 'Задания на тождественную истинность/ложность.', callback_data: 'presentation13.pdf' }],
-    [{ text: 'Логические уравнения (объяснение).', callback_data: 'presentation14.pdf' }],
-    [{ text: 'Системы лог. уравнений (задания).', callback_data: 'presentation15.pdf' }]
+    [{ text: 'Алгебра логики. Логические операции. Таблицы истинности', callback_data: 'presentation9.pdf' }],
+    [{ text: 'Преобразование логических выражений. Тождественная истинность/ложность', callback_data: 'presentation10.pdf' }],
+    [{ text: 'Логические уравнения (объяснение).', callback_data: 'presentation11.pdf' }],
   ]
 });
 
 const userCourse = JSON.stringify({
   inline_keyboard: [
-    [{ text: 'Операции с множествами.', callback_data: 'presentation16.pdf' }],
-    [{ text: 'Поиск файлов.', callback_data: 'presentation17.pdf' }],
-    [{ text: 'Базы данных.', callback_data: 'presentation18.pdf' }],
-    [{ text: 'Работа с таблицами.', callback_data: 'presentation19.pdf' }],
-    [{ text: 'IP адреса.', callback_data: 'presentation20.pdf' }],
-    [{ text: 'Графы.', callback_data: 'presentation21.pdf' }],
+    [{ text: 'Операции с множествами.', callback_data: 'presentation12.pdf' }],
+    [{ text: 'Поиск файлов.', callback_data: 'presentation13.pdf' }],
+    [{ text: 'Базы данных.', callback_data: 'presentation14.pdf' }],
+    [{ text: 'Работа с таблицами.', callback_data: 'presentation15.pdf' }],
+    [{ text: 'IP адреса.', callback_data: 'presentation16.pdf' }],
+    [{ text: 'Графы.', callback_data: 'presentation17.pdf' }]
   ]
 });
 
 const programming = JSON.stringify({
   inline_keyboard: [
-    [{ text: 'Python 3. Цикл while', callback_data: 'presentation22.pdf' }],
-    [{ text: 'Рекурсивные алгоритмы.', callback_data: 'presentation23.pdf' }],
-    [{ text: 'Массивы.', callback_data: 'presentation24.pdf' }],
-    [{ text: 'Исполнители.', callback_data: 'presentation26.pdf' }],
-    [{ text: 'Алгоритмы для исполнителей.', callback_data: 'presentation27.pdf' }],
-    [{ text: 'Угадай алгоритм.', callback_data: 'presentation29.pdf' }],
-    [{ text: 'Обработка массивов.', callback_data: 'presentation30.pdf' }],
-    [{ text: 'Функции.', callback_data: 'presentation31.pdf' }],
+    [{ text: 'Python 3. Обзор языка', callback_data: 'presentation18.pdf' }],
+    [{ text: 'Python 3. Цикл while', callback_data: 'presentation19.pdf' }],
+    [{ text: 'Рекурсивные алгоритмы.', callback_data: 'presentation20.pdf' }],
+    [{ text: 'Алгоритмы для исполнителей.', callback_data: 'presentation21.pdf' }],
+    [{ text: 'Число программ.', callback_data: 'presentation22.pdf' }],
+    //[{ text: 'Массивы.', callback_data: 'presentation24.pdf' }],
+    //[{ text: 'Исполнители.', callback_data: 'presentation26.pdf' }],
+    //[{ text: 'Угадай алгоритм.', callback_data: 'presentation29.pdf' }],
+    //[{ text: 'Обработка массивов.', callback_data: 'presentation30.pdf' }],
+    //[{ text: 'Функции.', callback_data: 'presentation31.pdf' }],
   ]
 });
 
-const expertProgramming = JSON.stringify({
+/*const expertProgramming = JSON.stringify({
   inline_keyboard: [
     [{ text: 'Поиск ошибок.', callback_data: 'presentation32.pdf' }],
     [{ text: 'Алгоритмы обработки массивов.', callback_data: 'presentation25.pdf' }],
     [{ text: 'Эффективные программы.', callback_data: 'presentation33.pdf' }],
   ]
-});
+});*/
 
 const bot = new TelegramBot(token,{polling:true});
 
