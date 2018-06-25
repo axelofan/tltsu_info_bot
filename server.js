@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 const emoji = require('node-emoji').get;
-const token = '300054898:AAEFBYpmGCQ1a_vlA0-zj_RiMVLgZh-UPYk';
+const token = '***';
 const authorChat = 173295753;
 
 const startMenu = JSON.stringify({
